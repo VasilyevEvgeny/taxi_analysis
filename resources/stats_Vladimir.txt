@@ -1,0 +1,125 @@
+==========================================================================================
+LOCATION: Vladimir
+==========================================================================================
+To analyze the change in taxi fare over time, consider parameter
+RRC_i = total_sum / distance - relative ride cost adjusted for inflation.
+To keep a sufficient sample only Economy service class is considered.
+For all used statistical criteria significance level is 0.05.
+==========================================================================================
+Analyze all RRC_i for normality...
+==========================================================================================
+Rides: 91
+Data description:
+                        mean         std       50%        min          max
+total_sum, [RUB]  217.472527  134.091622  183.0000  83.000000  1223.000000
+duration, [min]    15.461538   20.789050   13.0000   5.000000   206.000000
+distance, [km]      7.980220    3.954020    7.2000   1.800000    37.000000
+RRC_i, [RUB/km]    33.664086   11.306396   29.5471  18.406189    72.329485
+Check RRC_i for normality:
+Shapiro-Wilk test -> W = 0.8853, p_value = 0.0000
+All RRC_i is NOT distributed normally!
+==========================================================================================
+Analyze annular RRC_i for normality...
+==========================================================================================
+YEAR = 2018
+Rides: 8
+Data description:
+                        mean        std         50%         min         max
+total_sum, [RUB]  158.000000  25.002857  148.500000  134.000000  200.000000
+duration, [min]    13.750000   2.815772   14.000000    9.000000   18.000000
+distance, [km]      8.437500   1.945645    7.550000    6.900000   12.000000
+RRC_i, [RUB/km]    25.905089   3.918707   25.430587   21.312102   32.933957
+Check RRC_i for normality:
+Shapiro-Wilk test -> W = 0.9033, p_value = 0.3095
+RRC_i for current year is distributed normally!
+==========================================================================================
+YEAR = 2019
+Rides: 28
+Data description:
+                        mean        std         50%        min       max
+total_sum, [RUB]  167.250000  50.591044  145.000000  113.00000  316.0000
+duration, [min]    12.357143   3.141294   12.000000    7.00000   20.0000
+distance, [km]      7.378571   1.110007    7.200000    4.70000   11.0000
+RRC_i, [RUB/km]    30.063851   9.154448   25.090263   22.92068   53.2667
+Check RRC_i for normality:
+Shapiro-Wilk test -> W = 0.7509, p_value = 0.0000
+RRC_i for current year is NOT distributed normally!
+==========================================================================================
+YEAR = 2020
+Rides: 12
+Data description:
+                        mean        std         50%         min         max
+total_sum, [RUB]  195.416667  56.016975  195.000000  106.000000  274.000000
+duration, [min]    10.833333   2.443296   10.500000    8.000000   15.000000
+distance, [km]      7.000000   0.532575    7.200000    5.900000    7.600000
+RRC_i, [RUB/km]    34.993259   8.878230   34.190558   22.602046   47.953719
+Check RRC_i for normality:
+Shapiro-Wilk test -> W = 0.9379, p_value = 0.4710
+RRC_i for current year is distributed normally!
+==========================================================================================
+YEAR = 2021
+Rides: 23
+Data description:
+                        mean        std         50%        min         max
+total_sum, [RUB]  239.956522  99.477489  212.000000  83.000000  510.000000
+duration, [min]    22.347826  40.388577   13.000000   5.000000  206.000000
+distance, [km]      8.208696   4.414327    7.200000   1.800000   21.000000
+RRC_i, [RUB/km]    37.890582  13.644583   34.378488  21.102919   72.329485
+Check RRC_i for normality:
+Shapiro-Wilk test -> W = 0.8624, p_value = 0.0046
+RRC_i for current year is NOT distributed normally!
+==========================================================================================
+YEAR = 2022
+Rides: 20
+Data description:
+                       mean         std         50%         min          max
+total_sum, [RUB]  298.95000  234.339941  249.000000  103.000000  1223.000000
+duration, [min]    15.35000    7.183863   14.000000    5.000000    39.000000
+distance, [km]      8.96500    6.772877    7.250000    1.900000    37.000000
+RRC_i, [RUB/km]    36.15004   12.078299   34.720362   18.406189    60.167525
+Check RRC_i for normality:
+Shapiro-Wilk test -> W = 0.9574, p_value = 0.4937
+RRC_i for current year is distributed normally!
+==========================================================================================
+RRC_i for at least one year is not distributed normally!
+==========================================================================================
+Check if Median(RRC_i, 2018) < Median(RRC_i, 2019):
+Mann-Whitney test -> U = 99.0000, p_value = 0.6407
+NO
+==========================================================================================
+Check if Median(RRC_i, 2018) < Median(RRC_i, 2020):
+Mann-Whitney test -> U = 21.0000, p_value = 0.0387
+YES
+==========================================================================================
+Check if Median(RRC_i, 2018) < Median(RRC_i, 2021):
+Mann-Whitney test -> U = 32.0000, p_value = 0.0054
+YES
+==========================================================================================
+Check if Median(RRC_i, 2018) < Median(RRC_i, 2022):
+Mann-Whitney test -> U = 39.0000, p_value = 0.0375
+YES
+==========================================================================================
+Check if Median(RRC_i, 2019) < Median(RRC_i, 2020):
+Mann-Whitney test -> U = 117.0000, p_value = 0.1361
+NO
+==========================================================================================
+Check if Median(RRC_i, 2019) < Median(RRC_i, 2021):
+Mann-Whitney test -> U = 182.0000, p_value = 0.0083
+YES
+==========================================================================================
+Check if Median(RRC_i, 2019) < Median(RRC_i, 2022):
+Mann-Whitney test -> U = 190.0000, p_value = 0.0613
+NO
+==========================================================================================
+Check if Median(RRC_i, 2020) < Median(RRC_i, 2021):
+Mann-Whitney test -> U = 136.0000, p_value = 0.9584
+NO
+==========================================================================================
+Check if Median(RRC_i, 2020) < Median(RRC_i, 2022):
+Mann-Whitney test -> U = 117.0000, p_value = 0.9225
+NO
+==========================================================================================
+Check if Median(RRC_i, 2021) < Median(RRC_i, 2022):
+Mann-Whitney test -> U = 245.0000, p_value = 0.7240
+NO
+==========================================================================================
